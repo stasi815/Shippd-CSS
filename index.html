@@ -7,14 +7,20 @@
 <body class="dark">
 
 	<div class="navbar">
+        <h1 class="title">Shippd</h1>
+
 		<ul>
-			<li><h1 class="title">Framework Name</h1></li>
+			<li><a href="#headings">Headings</a></li>
+			<li><a href="#pStyles">Paragraph Styles</a></li>
+			<li><a href="#buttons">Buttons</a></li>
+			<li><a href="#links">Links</a></li>
+			<li><a href="#forms">Forms and Controls</a></li>
 			<li><a href="#colors">Colors</a></li>
 			<li><a href="#navbar">Navbar</a></li>
-			<li><a href="#headings">Headings</a></li>
+			<li><a href="#footers">Footer</a></li>
+			<li><a href="#components">Components</a></li>
+			<li><a href="#colorPalette">Color Palette</a></li>
 			<li><a href="#type">Type</a></li>
-			<li><a href="#forms">forms</a>
-			<li><a href="#footer">Footer</a></li>
 		</ul>
 		<ul>
 			<li><a href="link/to/your/framework/repo">GitHub</a></li>
@@ -45,7 +51,7 @@
 			</pre>
 		</section>
 
-		<section id="type">
+		<section id="pStyles">
 			<h1>Paragraph styles</h1>
 			<p>This is the <strong>strong tag</strong> in a paragraph.
 				This is the <em>em tag in a paragraph</em>, elements such
@@ -61,50 +67,105 @@
 			</pre>
 		</section>
 
-		<section id="forms">
+		<section id="buttons">
 			<h2>Buttons</h2>
 
 			<p>This is your average button. You might want to click it.</p>
 
-			<p><button>Submit</button></p>
+			<p><button class="btn-medium">Submit</button></p>
 
 			<pre>
 				<code>
-&lt;button&gt;Submit&lt;/button&gt;
+&lt;button class=&quot;btn-medium&quot;&gt;Submit&lt;/button&gt;
 				</code>
 			</pre>
 
 			<p>This button has consequences. You might want to think twice before clicking.</p>
 			<p>Customize buttons by adding CSS variables inline or with a class.</p>
 			<p>
-<button
-	style="--weight: bold; --background-color: #f85353;"
->Delete</button>
-	<button
-	style="--background-color: #6bc253;"
->Go!</button>
+<button class="btn-danger btn-medium">Delete</button>
+<button class="btn-success btn-medium">Go!</button>
 			</p>
 
 			<pre>
 				<code>
-&lt;button
-	style=&quot;--weight: bold;
-	--background-color: #f85353;&quot;
-&gt;Delete&lt;/button&gt;
+&lt;button class=&quot;btn-danger btn-medium&quot;&gt;Delete&lt;/button&gt;
 
-&lt;button
-	style=&quot;--background-color: #6bc253;&quot;
-&gt;Go!&lt;/button&gt;
+&lt;button class=&quot;btn-success btn-medium&quot;&gt;Go!&lt;/button&gt;
 				</code>
 			</pre>
+	<!-- Primary -->
+	<button class='btn-primary btn-medium'>Primary</button>
+	<pre>
+		<code>
+&lt;button class=&quot;btn-primary btn-medium&quot;&gt;Primary&lt;/button&gt;
+		</code>
+	</pre>
+	<!-- Secondary -->
+	<button class='btn-secondary btn-medium'>Secondary</button>
+	<pre>
+		<code>
+&lt;button class=&quot;btn-secondary btn-medium&quot;&gt;Secondary&lt;/button&gt;
+		</code>
+	</pre>
+	<!-- Success -->
+	<button class='btn-success btn-medium'>Success</button>
+	<pre>
+		<code>
+&lt;button class=&quot;btn-success btn-medium&quot;&gt;Success&lt;/button&gt;
+		</code>
+	</pre>
+	<!-- Danger -->
+	<button class="btn-danger btn-medium">Danger</button>
+	<pre>
+		<code>
+&lt;button class=&quot;btn-danger btn-medium&quot;&gt;Danger&lt;/button&gt;
+		</code>
+	</pre>
+	<!-- Warning -->
+	<button class="btn-warning btn-medium">Warning</button>
+	<pre>
+		<code>
+&lt;button class=&quot;btn-warning btn-medium&quot;&gt;Warning&lt;/button&gt;
+		</code>
+	</pre>
+	<!-- Info -->
+	<button class="btn-info btn-medium">Info</button>
+	<pre>
+		<code>
+&lt;button class=&quot;btn-info btn-medium&quot;&gt;Info&lt;/button&gt;
+		</code>
+	</pre>
+	<!-- Light -->
+	<button class='btn-light btn-medium'>Light</button>
+	<pre>
+		<code>
+&lt;button class=&quot;btn-light btn-medium&quot;&gt;Light&lt;/button&gt;
+		</code>
+	</pre>
+	<!-- Dark -->
+	<button class="btn-dark btn-medium">Dark</button>
+	<pre>
+		<code>
+&lt;button class=&quot;btn-dark btn-medium&quot; style=&quot;--weight: bold; --background-color: #f85353;&quot;&gt;Dark&lt;/button&gt;
+		</code>
+	</pre>
+	<!-- Link -->
+	<button class="btn-link btn-medium"><a href="#">Link</a></button>
+	<pre>
+		<code>
+&lt;button class=&quot;btn-link btn-medium&quot;&gt;Link&lt;/button&gt;
+		</code>
+	</pre>
+
 		</section>
 
-		<section>
+		<section id="links">
 			<h2>Links</h2>
 			<p>This <a href="#">paragraph</a> contains a couple <a href="#">links</a> to show off their styles in context.</p>
 		</section>
 
-		<section>
+		<section id="forms">
 			<h2>Forms and controls</h2>
 			<form>
 				<label>
@@ -354,7 +415,7 @@
 			</div>
 		</section>
 
-		<section>
+		<section id="components">
 			<h3>Components</h3>
 			<p>Frmwrk CSS also includes some slideshow components. To use these include
 				the JS files at the bottom of the body and use the markup as shown.</p>
@@ -397,7 +458,7 @@
 				</div>
 		</section>
 
-		<section>
+		<section id="colorPalette">
 			<h3>Full Color Palette</h3>
 
 			<div class="">
