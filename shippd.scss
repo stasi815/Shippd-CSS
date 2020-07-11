@@ -43,8 +43,34 @@ button {
     background-color: var(--bg-color);
     color: var(--fg-color);
     font-weight: var(--weight);
-    border-radius: 5px;
-    border-style: none;
+    border-radius: 8px;
+    padding: 0.35em 0.65em;
+    border: 1px solid;
+}
+
+button:hover {
+    --bg-color: rgb(57, 145, 254);
+    --fg-color: white;
+}
+
+.delete-btn {
+    --bg-color: white;
+    --fg-color: #f85353;
+}
+
+.delete-btn:hover {
+    --bg-color: #f85353;
+    --fg-color: white;
+}
+
+.go-btn {
+    --bg-color: white;
+    --fg-color: #6bc253;
+}
+
+.go-btn:hover {
+    --bg-color: #6bc253;
+    --fg-color: white;
 }
 
 button.btn-primary {
@@ -52,60 +78,79 @@ button.btn-primary {
     color: var(--bg-color);
 }
 
+.btn-primary {
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+}
+
 button.btn-secondary {
     --bg-color: grey;
     --fg-color: white;
+}
 
-    background-color: var(--bg-color);
-    color: var(--fg-color);
+.btn-secondary:hover {
+    --bg-color: white;
+    --fg-color: grey;
 }
 
 button.btn-success {
     --bg-color: #6bc253;
     --fg-color: white;
+}
 
-    background-color: var(--bg-color);
-    color: var(--fg-color);
+.btn-success:hover {
+    --bg-color: white;
+    --fg-color: #6bc253;
 }
 
 button.btn-danger {
     --bg-color: #f85353;
     --fg-color: white;
+}
 
-    background-color: var(--bg-color);
-    color: var(--fg-color);
+.btn-danger:hover {
+    --bg-color: white;
+    --fg-color: #f85353;
 }
 
 button.btn-warning {
     --bg-color: rgb(255, 238, 0);
     --fg-color: black;
+}
 
-    background-color: var(--bg-color);
-    color: var(--fg-color);
+.btn-warning:hover {
+    --bg-color: black;
+    --fg-color: rgb(255, 238, 0);
 }
 
 button.btn-light{
     --bg-color: rgb(242, 242, 242);
     --fg-color: black;
+}
 
-    background-color: var(--bg-color);
-    color: var(--fg-color);
+.btn-light:hover {
+    --bg-color: black;
+    --fg-color: rgb(242, 242, 242);
 }
 
 button.btn-dark {
     --bg-color: black;
     --fg-color: white;
-
-    background-color: var(--bg-color);
-    color: var(--fg-color);
+}
+.btn-dark:hover {
+    --bg-color: rgb(242, 242, 242);
+    --fg-color: black;
 }
 
 button.btn-link {
     --bg-color: white;
     --fg-color: rgb(0, 0, 165);
+}
 
-    background-color: var(--bg-color);
-    color: var(--fg-color);
+
+.btn-link:hover {
+    --bg-color: rgb(81, 198, 237);
+    color: white;
 }
 
 button.btn-small {
