@@ -289,6 +289,7 @@ form {
   background-color: #1c3535;
   color: white;
   padding: 1em;
+  position: sticky;
 }
 
 .navbar > ul {
@@ -317,6 +318,40 @@ form {
 
 .navbar-three {
   justify-content: space-evenly;
+}
+
+/*--------------------- Footers -------------------*/
+div.footer {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  background-color: #1c3535;
+  margin: 0;
+  color: white;
+  padding: 1em;
+  align-items: baseline;
+  justify-content: center;
+}
+
+div.footer > ul {
+  margin: 0;
+  list-style: none;
+  flex: 1;
+}
+
+div.footer > ul > li {
+  margin: 0.5em;
+}
+
+div.footer > ul > li > h3 {
+  margin: 0;
+}
+
+div.footer > ul > li > a {
+  padding-top: 1em;
+  padding-right: 1em;
+  padding-left: 1em;
+  color: white;
 }
 
 /*# sourceMappingURL=shippd.css.map */
