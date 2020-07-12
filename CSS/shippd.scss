@@ -12,6 +12,7 @@
     --color-danger: #f85353;
     --color-warning: rgb(255, 238, 0);
     --color-lightest: rgb(245, 245, 245);
+    --color-nav-footer: #1c3535;
 }
 
 body {
@@ -57,9 +58,15 @@ body > div.container {
 
 /*--------------------- Selected Text -------------------*/
 
+.selection-section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
 .selections::selection {
-    color: red;
-    background: yellow;
+    color: white;
+    background: var(--color-info);
 }
 
 /*--------------------- Code -------------------*/
@@ -194,7 +201,6 @@ button.btn-link {
     --fg-color: rgb(1, 99, 131);
 }
 
-
 .btn-link:hover {
     --bg-color: var(--color-info);
     color: white;
@@ -219,13 +225,20 @@ a {
 }
 
 a:visited {
-    color: rgb(1, 99, 131);
+    color: rgb(125, 1, 131);
 }
 
 a:hover {
     color: rgb(81, 198, 237);
 }
+
 /*--------------------- Forms -------------------*/
+
+.forms-section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
 
 
 input[type=text],
@@ -268,13 +281,17 @@ form {
     align-items: stretch;
 }
 
-/*--------------------- Navbars -------------------*/
+.comment-text {
+    margin-top: 1em;
+}
+
+/*--------------------- Navbar -------------------*/
 .navbar {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
-    background-color: rgb(28, 53, 53);
+    background-color:  var( --color-nav-footer);
     color: rgb(255, 255, 255);
     padding: 1em;
     position: sticky;
@@ -293,7 +310,12 @@ form {
 
 .navbar > ul > li > a {
     text-decoration: underline;
-    color: white;}
+    color: white;
+}
+
+.navbar > ul > li > a:hover {
+    color: var(--color-info);
+}
 
 .navbar > ul > li > h1.title {
     margin: 0 0.5em 0 0;
@@ -308,22 +330,23 @@ form {
 
 }
 
-/*--------------------- Footers -------------------*/
+/*--------------------- Footer -------------------*/
 
 div.footer {
     display: flex;
     flex-direction: row;
     list-style: none;
-    background-color: rgb(28, 53, 53);
+    background-color: var( --color-nav-footer);
     margin: 0;
     color: rgb(255, 255, 255);
     padding: 1em;
-    align-items: baseline;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: space-evenly;
 }
 
 div.footer > ul {
     margin: 0;
+    padding: 0;
     list-style: none;
     flex: 1;
 }
@@ -337,9 +360,54 @@ div.footer > ul > li> h3 {
 }
 
 div.footer > ul > li > a {
-    padding-top: 1em;
-    padding-right: 1em;
-    padding-left: 1em;
+    padding-top: 1em 1em 0 1em;
     color: rgb(255, 255, 255);
 }
 
+div.footer > ul > li > a:hover {
+    color: var(--color-info);
+}
+/*--------------------- Components -------------------*/
+
+
+.components {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/*--------------------- Card -------------------*/
+
+.card-style {
+    margin-bottom: 3em;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.card-img-top {
+    height: 180px;
+    width: 286px;
+    background-color: rgb(138, 138, 138);
+    color: white;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: none;
+    border-left: 1px solid black;
+}
+
+.card-body {
+    padding: 1em;
+    border-top: none;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    border-left: 1px solid;
+}
+
+.card-body > h5.card-title {
+    margin: 0;
+}
