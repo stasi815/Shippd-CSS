@@ -55,6 +55,13 @@ body > div.container {
     flex-wrap: wrap;
 }
 
+/*--------------------- Selected Text -------------------*/
+
+.selections::selection {
+    color: red;
+    background: yellow;
+}
+
 /*--------------------- Code -------------------*/
 
 code {

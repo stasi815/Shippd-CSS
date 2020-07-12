@@ -5,14 +5,13 @@ Your CSS framework should support the following features. Use this checklist to 
 - Setup name made a repo
   - [x] Named your framework
   - [x] Made a repo
-  - [ ] Stretch: organize files in folders
+  - [x] Stretch: organize files in folders
   - Font styles styled basic text elements
   - [x] Defined a font stack on the body
   - [x] Styled headings: h1-6
   - [x] Styled inline elements: strong, em, code
   - [x] Style `<a>` tag. Include `:hover` styles
-  - [ ] **Stretch:** style `<mark>`
-  - [ ] **Stretch:** add a style for text selection, [read this](https://www.w3schools.com/cssref/sel_selection.asp)
+  - [x] **Stretch:** add a style for text selection, [read this](https://www.w3schools.com/cssref/sel_selection.asp)
   - [ ] **Stretch:** Add color classes. Follow the example set by [Bootstrap colors](https://getbootstrap.com/docs/4.5/utilities/colors/#color)
 - [Button styles](https://github.com/Make-School-Courses/FEW-2.2-Web-Design-and-Advanced-CSS/blob/master/lessons/lesson-05.md#design-a-button) for warning, info, action, etc.
   - [x] Basic button styles
