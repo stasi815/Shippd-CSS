@@ -6,9 +6,10 @@
 </head>
 <body class="dark">
 
-	<div class="navbar">
-        <h1 class="title">Shippd</h1>
-
+	<div class="navbar navbar-two">
+		<ul>
+			<li><h1 class="title">Shippd</h1></li>
+		</ul>
 		<ul>
 			<li><a href="#headings">Headings</a></li>
 			<li><a href="#pStyles">Paragraph Styles</a></li>
@@ -21,8 +22,6 @@
 			<li><a href="#components">Components</a></li>
 			<li><a href="#colorPalette">Color Palette</a></li>
 			<li><a href="#type">Type</a></li>
-		</ul>
-		<ul>
 			<li><a href="https://github.com/stasi815/Shippd-CSS">GitHub</a></li>
 		</ul>
 	</div>
@@ -51,7 +50,7 @@
 			</pre>
 		</section>
 
-		<section id="pStyles">
+		<section id="pStyles" class="paragraphs">
 			<h1>Paragraph styles</h1>
 			<p>This is the <strong>strong tag</strong> in a paragraph.
 				This is the <em>em tag in a paragraph</em>, elements such
@@ -59,13 +58,12 @@
 				example of the <abbr>abbreviation tag.</abbr> You'd use
 				abbr for things like <abbr title="Hyper Text Markup Language">HTML</abbr>
 				and <abbr title="Cascading Stylesheets">CSS</abbr>.</p>
-
-			<pre>
-				<code>
-&lt;p&gt;This is an &lt;strong&gt;average&lt;/strong&gt; paragraph. It includes some &lt;em&gt;inline&lt;/em&gt; elements such as &lt;strong&gt; and &lt;em&gt;.&lt;/p&gt;
-				</code>
-			</pre>
-		</section>
+				<pre>
+					<code>
+&lt;p&gt;This is an &lt;strong&gt;average&lt;/strong&gt; paragraph. It includes
+some &lt;em&gt;inline&lt;/em&gt; elements such as &lt;strong&gt; and &lt;em&gt;.&lt;/p&gt;
+					</code>
+				</pre>
 
 		<section id="buttons">
 			<h2>Buttons</h2>
@@ -147,7 +145,7 @@
 	<button class="btn-dark btn-medium">Dark</button>
 	<pre>
 		<code>
-&lt;button class=&quot;btn-dark btn-medium&quot; style=&quot;--weight: bold; --background-color: #f85353;&quot;&gt;Dark&lt;/button&gt;
+&lt;button class=&quot;btn-dark btn-medium&quot; style=&quot;--weight: bold;&quot;&gt;Dark&lt;/button&gt;
 		</code>
 	</pre>
 	<!-- Link -->
@@ -161,21 +159,21 @@
 <button class="btn-small">Sm</button>
 <pre>
 	<code>
-&lt;button class=&quot;btn-small&quot; style=&quot;--weight: bold; --background-color: #f85353;&quot;&gt;Dark&lt;/button&gt;
+&lt;button class=&quot;btn-small&quot; style=&quot;--weight: bold;&quot;&gt;Dark&lt;/button&gt;
 	</code>
 </pre>
 		<!-- Medium -->
-<button class="btn-medium" style="letter-spacing: 0.25em;">Md</button>
+<button class="btn-medium">Md</button>
 <pre>
 	<code>
-&lt;button class=&quot;btn-medium&quot; style=&quot;--weight: bold; --background-color: #f85353;&quot;&gt;Dark&lt;/button&gt;
+&lt;button class=&quot;btn-medium&quot; style=&quot;--weight: bold;&quot;&gt;Dark&lt;/button&gt;
 	</code>
 </pre>
 	<!-- Big -->
-<button class="btn-big" style="letter-spacing: 1em;">Large</button>
+<button class="btn-big">Large</button>
 <pre>
 	<code>
-&lt;button class=&quot;btn-big&quot; style=&quot;--weight: bold; --background-color: #f85353;&quot;&gt;Dark&lt;/button&gt;
+&lt;button class=&quot;btn-big&quot; style=&quot;--weight: bold;&quot;&gt;Dark&lt;/button&gt;
 	</code>
 </pre>
 
@@ -241,7 +239,7 @@
 
 				<div style="background-color: var(--color-md-light)">--color-md-light</div>
 
-				<div style="background-color: var(--color-dark); color: var(--color-background)">--color-md-dark</div>
+				<div style="background-color: var(--color-md-dark); color: var(--color-background)">--color-md-dark</div>
 
 				<div style="background-color: var(--color-primary); color: var(--color-background)">--color-primary</div>
 
@@ -251,7 +249,7 @@
 
 				<div style="background-color: var(--color-danger); color: var(--color-background)">--color-danger</div>
 
-				<div style="background-color: var(--color-callout)">--color-callout</div>
+				<div style="background-color: var(--color-warning)">--color-warning</div>
 				<div style="background-color: var(--color-lightest)">--color-lightest</div>
 			</div>
 		</section>
@@ -294,8 +292,8 @@
 
 			<h2>Navbar 2</h2>
 			<p>A navbar with groups of elements on the left and the right.</p>
-			<p>Use two children under <code>div.navbar</code>.</p>
-			<div class="navbar">
+			<p>Use two children under <code>div.navbar-two</code>.</p>
+			<div class="navbar navbar-two">
 				<ul>
 					<li><h1 class="title">TITLE</h1></li>
 					<li><a href="#">Products</a></li>
@@ -311,7 +309,7 @@
 			<div>
 				<pre class="code-block">
 					<code>
-&lt;div class=&quot;navbar&quot;&gt;
+&lt;div class=&quot;navbar navbar-two&quot;&gt;
 	&lt;ul&gt;
 		&lt;li&gt;&lt;h1 class=&quot;title&quot;&gt;TITLE&lt;/h1&gt;&lt;/li&gt;
 		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Products&lt;/a&gt;&lt;/li&gt;
@@ -327,9 +325,9 @@
 				</pre>
 			</div>
 
-			<p>here is an alternative with the site title on the left and links on the right.</p>
+			<p> Here is an alternative with the site title on the left and links on the right.</p>
 
-			<div class="navbar">
+			<div class="navbar navbar-two">
 				<ul>
 					<li><h1 class="title">TITLE</h1></li>
 				</ul>
@@ -345,7 +343,7 @@
 			<div>
 					<pre class="code-block">
 						<code>
-&lt;div class=&quot;navbar&quot;&gt;
+&lt;div class=&quot;navbar navbar-two&quot;&gt;
 	&lt;ul&gt;
 		&lt;li&gt;&lt;h1 class=&quot;title&quot;&gt;TITLE&lt;/h1&gt;&lt;/li&gt;
 	&lt;/ul&gt;
@@ -367,7 +365,7 @@
 			<h2>Navbar 3</h2>
 			<p>With three children the second child will be centered.
 				This example places the site title in the center.</p>
-			<div class="navbar">
+			<div class="navbar navbar-three">
 				<ul>
 					<li><a href="#">Products</a></li>
 					<li><a href="#">Mission</a></li>
@@ -386,7 +384,7 @@
 			<div>
 					<pre class="code-block">
 						<code>
-&lt;div class=&quot;navbar&quot;&gt;
+&lt;div class=&quot;navbar navbar-three&quot;&gt;
 	&lt;ul&gt;
 		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Products&lt;/a&gt;&lt;/li&gt;
 		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mission&lt;/a&gt;&lt;/li&gt;

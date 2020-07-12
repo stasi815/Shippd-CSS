@@ -1,15 +1,40 @@
+:root {
+    --color-background: white;
+    --color-foreground: rgb(57, 145, 254);
+    --color-dark: black;
+    --color-light: rgb(242, 242, 242);
+    --color-md-light: rgb(223, 223, 223);
+    --color-md-dark: rgb(68, 68, 68);
+    --color-primary: var(--color-foreground);
+    --color-secondary: grey;
+    --color-info: rgb(81, 198, 237);
+    --color-success: #6bc253;
+    --color-danger: #f85353;
+    --color-warning: rgb(255, 238, 0);
+    --color-lightest: rgb(245, 245, 245);
+}
+
 body {
     --font-family: 'Avenir', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     font-family: var(--font-family);
     line-height: 1.5;
     letter-spacing: .5px;
     background-color: rgb(218, 235, 235);
     color: rgb(28, 53, 53);
     font-size: 18px;
-    // padding: 10px 100px 10px 100px;
+    margin: 0;
 }
 
+body > div.container {
+    padding: 0 1em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
 
 /*--------------------- Headings -------------------*/
 @for $i from 1 through 6 {
@@ -17,12 +42,17 @@ body {
 
     h#{$i} {
         font-size: $font-size;
+        font-family: 'Optima', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', serif;
+        letter-spacing: 1px;
     }
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Optima', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', serif;
-    letter-spacing: 1px;
+/*--------------------- Paragraph Styles -------------------*/
+
+.paragraphs {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 /*--------------------- Code -------------------*/
@@ -35,7 +65,7 @@ code {
 
 button {
     --bg-color: white;
-    --fg-color: rgb(57, 145, 254);
+    --fg-color: var(--color-foreground);
     --weight: bold;
 
 
@@ -49,27 +79,27 @@ button {
 }
 
 button:hover {
-    --bg-color: rgb(57, 145, 254);
+    --bg-color: var(--color-foreground);
     --fg-color: white;
 }
 
 .delete-btn {
     --bg-color: white;
-    --fg-color: #f85353;
+    --fg-color: var(--color-danger);
 }
 
 .delete-btn:hover {
-    --bg-color: #f85353;
+    --bg-color: var(--color-danger);
     --fg-color: white;
 }
 
 .go-btn {
     --bg-color: white;
-    --fg-color: #6bc253;
+    --fg-color: var(--color-success);
 }
 
 .go-btn:hover {
-    --bg-color: #6bc253;
+    --bg-color: var(--color-success);
     --fg-color: white;
 }
 
@@ -78,91 +108,101 @@ button.btn-primary {
     color: var(--bg-color);
 }
 
-.btn-primary {
-    background-color: var(--bg-color);
-    color: var(--fg-color);
+.btn-primary:hover {
+    background-color: var(--fg-color);
+    color: var(--bg-color);
 }
 
 button.btn-secondary {
-    --bg-color: grey;
+    --bg-color: var(--color-secondary);
     --fg-color: white;
 }
 
 .btn-secondary:hover {
     --bg-color: white;
-    --fg-color: grey;
+    --fg-color: var(--color-secondary);
 }
 
 button.btn-success {
-    --bg-color: #6bc253;
+    --bg-color: var(--color-success);
     --fg-color: white;
 }
 
 .btn-success:hover {
     --bg-color: white;
-    --fg-color: #6bc253;
+    --fg-color: var(--color-success);
 }
 
 button.btn-danger {
-    --bg-color: #f85353;
+    --bg-color: var(--color-danger);
     --fg-color: white;
 }
 
 .btn-danger:hover {
     --bg-color: white;
-    --fg-color: #f85353;
+    --fg-color: var(--color-danger);
 }
 
 button.btn-warning {
-    --bg-color: rgb(255, 238, 0);
-    --fg-color: black;
+    --bg-color: var(--color-warning);
+    --fg-color: var(--color-dark);
 }
 
 .btn-warning:hover {
-    --bg-color: black;
-    --fg-color: rgb(255, 238, 0);
+    --bg-color: var(--color-dark);
+    --fg-color: var(--color-warning);
+}
+
+button.btn-info {
+    --bg-color: white;
+    --fg-color: var(--color-info);
+}
+
+.btn-info:hover {
+    --bg-color: var(--color-info);
+    --fg-color: white;
 }
 
 button.btn-light{
-    --bg-color: rgb(242, 242, 242);
-    --fg-color: black;
+    --bg-color: var(--color-light);
+    --fg-color: var(--color-dark);
 }
 
 .btn-light:hover {
-    --bg-color: black;
-    --fg-color: rgb(242, 242, 242);
+    --bg-color: var(--color-dark);
+    --fg-color: var(--color-light);
 }
 
 button.btn-dark {
-    --bg-color: black;
+    --bg-color: var(--color-dark);
     --fg-color: white;
 }
 .btn-dark:hover {
-    --bg-color: rgb(242, 242, 242);
-    --fg-color: black;
+    --bg-color: var(--color-light);
+    --fg-color: var(--color-dark);
 }
 
 button.btn-link {
     --bg-color: white;
-    --fg-color: rgb(0, 0, 165);
+    --fg-color: rgb(1, 99, 131);
 }
 
 
 .btn-link:hover {
-    --bg-color: rgb(81, 198, 237);
+    --bg-color: var(--color-info);
     color: white;
 }
 
 button.btn-small {
-    padding: 3px 12px 3px 12px;
+    padding: 3px 12px;
 }
 
 button.btn-medium {
-    padding: 5px 15px 5px 15px;
+    padding: 0.35em 0.65em;
 }
 
 button.btn-big {
-    padding: 8px 24px 8px 24px;
+    padding: 8px 24px;
 }
 
 /*--------------------- Links -------------------*/
@@ -173,6 +213,10 @@ a {
 
 a:visited {
     color: rgb(1, 99, 131);
+}
+
+a:hover {
+    color: rgb(81, 198, 237);
 }
 /*--------------------- Forms -------------------*/
 
@@ -215,4 +259,43 @@ form {
     display: flex;
     flex-direction: column;
     align-items: stretch;
+}
+
+/*--------------------- Navbars -------------------*/
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    background-color: rgb(28, 53, 53);
+    color: rgb(255, 255, 255);
+    padding: 1em;
+}
+
+.navbar > ul {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    list-style: none;
+}
+
+.navbar > ul > li {
+    padding: 0.25em;
+}
+
+.navbar > ul > li > a {
+    text-decoration: underline;
+    color: white;}
+
+.navbar > ul > li > h1.title {
+    margin: 0 0.5em 0 0;
+}
+
+.navbar-two {
+    justify-content: space-between;
+}
+
+.navbar-three {
+    justify-content: space-evenly;
+
 }
