@@ -37,6 +37,13 @@ body > div.container {
     flex-wrap: wrap;
 }
 
+pre {
+    background-color: rgba(223, 223, 223, 0.584);
+    display: flex;
+    justify-content: flex-start;
+    padding: 1em;
+}
+
 /*--------------------- Headings -------------------*/
 @for $i from 1 through 6 {
     $font-size: (9 - $i) * 0.30em;
