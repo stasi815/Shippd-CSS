@@ -13,6 +13,7 @@
     --color-warning: rgb(255, 238, 0);
     --color-lightest: rgb(245, 245, 245);
     --color-nav-footer: #1c3535;
+    --border-style: 1px solid black;
 }
 
 body {
@@ -296,7 +297,7 @@ form {
 .navbar {
     display: flex;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: baseline;
     flex-wrap: wrap;
     background-color:  var( --color-nav-footer);
     color: rgb(255, 255, 255);
@@ -306,7 +307,7 @@ form {
 
 .navbar > ul {
     display: flex;
-    justify-content: flex-start;
+    align-items: baseline;
     margin: 0;
     list-style: none;
 }
@@ -396,23 +397,47 @@ div.footer > ul > li > a:hover {
     align-items: flex-start;
 }
 
+.card-header {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-md-light);
+    border-top: var(--border-style);
+    border-right: var(--border-style);
+    border-bottom: none;
+    border-left: var(--border-style);
+    padding: 0.5em 1em;
+    margin: 0;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-md-light);
+    border-top: none;
+    border-right: var(--border-style);
+    border-bottom: var(--border-style);
+    border-left: var(--border-style);
+    padding: 0.5em 1em;
+    margin: 0;
+}
+
 .card-img-top {
     height: 180px;
     width: 286px;
     background-color: rgb(138, 138, 138);
     color: white;
-    border-top: 1px solid black;
-    border-right: 1px solid black;
+    border-top: var(--border-style);
+    border-right: var(--border-style);
     border-bottom: none;
-    border-left: 1px solid black;
+    border-left: var(--border-style);
 }
 
 .card-body {
     padding: 1em;
     border-top: none;
-    border-right: 1px solid;
-    border-bottom: 1px solid;
-    border-left: 1px solid;
+    border-right: var(--border-style);
+    border-bottom: var(--border-style);
+    border-left: var(--border-style);
 }
 
 .card-body > h5.card-title {
